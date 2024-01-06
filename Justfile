@@ -32,4 +32,4 @@ test: prepare
     --headless \
     --noplugin \
     -u tests/init.lua \
-    -c "PlenaryBustedDirectory tests/nvim-paredit-fennel { minimal_init='tests/init.lua', sequential=true }"
+    -c "PlenaryBustedDirectory tests/nvim-paredit-janet { minimal_init='tests/init.lua', sequential=true }"

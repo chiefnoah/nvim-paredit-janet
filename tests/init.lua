@@ -13,8 +13,8 @@ vim.bo.swapfile = false
 
 require("nvim-treesitter.configs").setup({
   parser_install_dir = vim.fn.getcwd() .. "/.build/parsers",
-  ensure_installed = { "fennel" },
+  ensure_installed = { "janet" },
   sync_install = true,
 })
 
-require("nvim-paredit-fennel").setup()
+require("nvim-paredit-janet").setup()

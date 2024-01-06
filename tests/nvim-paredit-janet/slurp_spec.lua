@@ -1,11 +1,11 @@
 local paredit = require("nvim-paredit.api")
 
-local prepare_buffer = require("tests.nvim-paredit-fennel.utils").prepare_buffer
-local expect_all = require("tests.nvim-paredit-fennel.utils").expect_all
-local expect = require("tests.nvim-paredit-fennel.utils").expect
+local prepare_buffer = require("tests.nvim-paredit-janet.utils").prepare_buffer
+local expect_all = require("tests.nvim-paredit-janet.utils").expect_all
+local expect = require("tests.nvim-paredit-janet.utils").expect
 
 describe("slurping forward", function()
-  vim.api.nvim_buf_set_option(0, "filetype", "fennel")
+  vim.api.nvim_buf_set_option(0, "filetype", "janet")
   local parser = vim.treesitter.get_parser(0)
 
   it("should slurp forward different form types", function()

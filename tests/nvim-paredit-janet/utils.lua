@@ -1,7 +1,7 @@
 local M = {}
 
 function M.prepare_buffer(params)
-  vim.api.nvim_buf_set_option(0, "filetype", "fennel")
+  vim.api.nvim_buf_set_option(0, "filetype", "janet")
 
   local content = params.content
   if type(content) == "string" then

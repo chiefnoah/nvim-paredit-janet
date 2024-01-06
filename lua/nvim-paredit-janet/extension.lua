@@ -18,12 +18,12 @@ local form_types = {
   "each",
 }
 
-M.whitespace_chars = { " ", "," }
+M.whitespace_chars = { " " }
 
 local function find_next_parent_form(current_node)
-  if common.included_in_table(form_types, current_node:type()) then
-    return current_node
-  end
+  -- if common.included_in_table(form_types, current_node:type()) then
+  --   return current_node
+  -- end
 
   local parent = current_node:parent()
   if parent then
@@ -44,9 +44,9 @@ function M.get_node_root(node)
 end
 
 function M.unwrap_form(node)
-  if common.included_in_table(form_types, node:type()) then
-    return node
-  end
+  -- if common.included_in_table(form_types, node:type()) then
+  --   return node
+  -- end
   local child = node:named_child(0)
   if child then
     return M.unwrap_form(child)

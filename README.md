@@ -1,8 +1,8 @@
-## nvim-paredit-fennel
+## nvim-paredit-janet
 
 **EXPERIMENTAL**
 
-Provides a language extension implementation to [nvim-paredit](https://github.com/julienvincent/nvim-paredit) for the Fennel programming language
+Provides a language extension implementation to [nvim-paredit](https://github.com/julienvincent/nvim-paredit) for the [Janet](https://janet-lang.org) programming language
 
 ## Installation 
 
@@ -10,11 +10,11 @@ Provides a language extension implementation to [nvim-paredit](https://github.co
 
 ```lua
 {
-  "julienvincent/nvim-paredit-fennel",
+  "CFiggers/nvim-paredit-janet",
   dependencies = { "julienvincent/nvim-paredit" },
-  ft = { "fennel" },
+  ft = { "janet" },
   config = function()
-    require("nvim-paredit-fennel").setup()
+    require("nvim-paredit-janet").setup()
   end
 }
 ```
