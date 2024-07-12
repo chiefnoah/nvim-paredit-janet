@@ -36,12 +36,12 @@ describe("slurping forward", function()
 
   it("should skip comments", function()
     prepare_buffer({
-      content = { "()", ";; comment", "a" },
+      content = { "()", "# comment", "a" },
       cursor = { 1, 1 },
     })
     paredit.slurp_forwards()
     expect({
-      content = { "(", ";; comment", "a)" },
+      content = { "(", "# comment", "a)" },
       cursor = { 1, 0 },
     })
   end)
