@@ -2,7 +2,10 @@
 
 **EXPERIMENTAL**
 
-Provides a language extension implementation to [nvim-paredit](https://github.com/julienvincent/nvim-paredit) for the [Janet](https://janet-lang.org) programming language
+Provides a language extension implementation to
+[nvim-paredit](https://github.com/julienvincent/nvim-paredit) for the
+[Janet](https://janet-lang.org) programming language utilizing the
+[tree-sitter-janet-simple](https://github.com/sogaiu/tree-sitter-janet-simple) grammar.
 
 ## Installation 
 
@@ -10,11 +13,9 @@ Provides a language extension implementation to [nvim-paredit](https://github.co
 
 ```lua
 {
-  "CFiggers/nvim-paredit-janet",
+  "chiefnoah/nvim-paredit-janet",
   dependencies = { "julienvincent/nvim-paredit" },
   ft = { "janet" },
-  config = function()
-    require("nvim-paredit-janet").setup()
-  end
+  config = true,
 }
 ```
